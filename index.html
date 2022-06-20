@@ -7,10 +7,35 @@
     <title>Lars Ree -- Project Exame 1 Resit</title>
 </head>
 <body>
-    
-    <input type="text" id="search" placeholder="Search Photos">
-    <button onclick="SearchPhotos()">Search</button>
-    <div id="result"></div>
+    <header class="header-section">
+        <div class="header-content">
+            <h1 class="logo">logo</h1>
+            <p class="sub-line">the best royalty free images you can find here.</p>
+
+            <form action="search.html">
+                <input type="text" autocomplete="off" name="search" class="search-box" placeholder="search image">
+                <button class="search-btn" type="submit">search</button>
+            </form>
+        </div>
+</header>
+    <section class="gallery">
+        <img src="img/img (1).png" class="gallery-img" alt="">
+        <img src="img/img (1).png" class="gallery-img" alt="">
+        <img src="img/img (1).png" class="gallery-img" alt="">
+        <img src="img/img (1).png" class="gallery-img" alt="">
+        <img src="img/img (1).png" class="gallery-img" alt="">
+        <img src="img/img (1).png" class="gallery-img" alt="">
+        <img src="img/img (1).png" class="gallery-img" alt="">
+        <img src="img/img (1).png" class="gallery-img" alt="">
+    </section>
+
+    <div class="image-popup">
+        <button class="close-btn"></button>
+        <a href="#" class="download-btn">download image</a>
+        <img src="img/img (1).png" class="large-img" alt="">
+        <button class="controls pre-btn"><img src="img/pre.png" alt=""></button>
+        <button class="controls nxt-btn"><img src="img/nxt.png" alt=""></button>
+    </div>
 </body>
 <script  src="./js/script.js"></script>
 </html>
