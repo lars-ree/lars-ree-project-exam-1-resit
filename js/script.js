@@ -14,9 +14,10 @@ const getImages = () => {
     });
 }
 
+
 const gallery = document.querySelector('.gallery');
 
-const makeImages = (data) => {
+function makeImages(data) {
     data.forEach((item, index) => {
 
         let img = document.createElement('img');
@@ -25,8 +26,13 @@ const makeImages = (data) => {
 
         gallery.appendChild(img);
 
-    })
+    });
 }
+
+getImages()
+
+
+let currentImage = 0; // will track the current large image
 
 
 
@@ -65,4 +71,23 @@ nxtBtns.addEventListener('click', () => {
     }
 })
 
-getImages()
+let searchParam = location.search.split('=').pop(); // this will give extract the search keyword from URL
+
+const search_photo_url = `https://api.unsplash.com/search/photos?client_id=${access_key}&query=${searchParam}&per_page=50`; // this is search image URL
+
+
+const searchImages = () => {
+    fetch(search_photo_url)
+    .then(res => res.json())
+    .then(data => {
+        allImages = data.results;
+        makeImages(allImages);
+       
+    });
+}
+
+if(searchParam == ''){
+    getImages();
+} else{
+    searchImages();
+}
