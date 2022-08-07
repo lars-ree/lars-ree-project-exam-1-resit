@@ -1,36 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lars Ree -- Project Exame 1 Resit</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-    <header class="header-section">
-        <div class="header-content">
-            <h1 class="logo">Photo Bank</h1>
-            <p class="sub-line">The best royalty free images for your projects</p>
+  <head>
+    <title>Lars Ree Project Exam 1 re-sit</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
+  <body>
+    <main>
+      <div class="container">
+        <h1 class="h1">Photo Search</h1>
+        <form class="js-form">
+          <input
+            type="text"
+            class="search-input js-search-input"
+            placeholder="Search high quality photos from Unsplash"
+            autofocus
+          />
+          <button type="submit" class="btn" onclick=" openResult()">
+            Search
+          </button>
+        </form>
+
+        <div class="result-stats js-result-stats"></div>
+
+        <div class="search-results js-search-results"></div>
+        <div class="pagination">
+          <button class="hidden prev-btn js-prev">
+            <a href="#top" style="text-decoration: none; color: white"
+              >Previous page</a
+            >
+          </button>
+          <button class="hidden next-btn js-next">
+            <a href="#top" style="text-decoration: none; color: white"
+              >Next page</a
+            >
+          </button>
         </div>
-</header>
-<form action="search.html" class="search-container">
-    <input type="text" name="search" class="search-input" placeholder="search image">
-    <button class="search" type="submit">search</button>
-</form>
-    <section class="gallery">
-        <img src="img/img (1).png" class="gallery-img" alt="">
-        <img src="img/img (1).png" class="gallery-img" alt="">
-        <img src="img/img (1).png" class="gallery-img" alt="">
-        <img src="img/img (1).png" class="gallery-img" alt="">
-        <img src="img/img (1).png" class="gallery-img" alt="">
-        <img src="img/img (1).png" class="gallery-img" alt="">
-        <img src="img/img (1).png" class="gallery-img" alt="">
-        <img src="img/img (1).png" class="gallery-img" alt="">
-    </section>
-   
-    
-</body>
-<script  src="./js/script.js"></script>
+      </div>
+
+      <div class="spinner js-spinner hidden">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+      </div>
+    </main>
+
+    <script type="text/javascript" src="./js/script.js"></script>
+  </body>
 </html>
